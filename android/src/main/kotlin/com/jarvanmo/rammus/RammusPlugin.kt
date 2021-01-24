@@ -54,19 +54,21 @@ class RammusPlugin(private val registrar: Registrar, private val methodChannel: 
                 }
             })
             pushService.setPushIntentService(RammusPushIntentService::class.java)
+            /*
             val appInfo = application.packageManager
                     .getApplicationInfo(application.packageName, PackageManager.GET_META_DATA)
-            val xiaomiAppId = appInfo.metaData.getString("com.xiaomi.push.client.app_id")
-            val xiaomiAppKey = appInfo.metaData.getString("com.xiaomi.push.client.app_key")
-            if ((xiaomiAppId != null && xiaomiAppId.isNotBlank())
-                    && (xiaomiAppKey != null && xiaomiAppKey.isNotBlank())){
+            val xiaomiAppId = appInfo.metaData.get("com.xiaomi.push.client.app_id")
+            val xiaomiAppKey = appInfo.metaData.get("com.xiaomi.push.client.app_key")
+            if ((xiaomiAppId != null && xiaomiAppId.toString().isNotBlank())
+                    && (xiaomiAppKey != null && xiaomiAppKey.toString().isNotBlank())){
                 Log.d(TAG, "正在注册小米推送服务...")
-                MiPushRegister.register(application.applicationContext, xiaomiAppId, xiaomiAppKey)
+                MiPushRegister.register(application.applicationContext, xiaomiAppId.toString(), xiaomiAppKey.toString())
             }
-            val huaweiAppId = appInfo.metaData.getString("com.huawei.hms.client.appid")
+            val huaweiAppId = appInfo.metaData.get("com.huawei.hms.client.appid")
+            
             if (huaweiAppId != null && huaweiAppId.toString().isNotBlank()){
                 Log.d(TAG, "正在注册华为推送服务...")
-                HuaWeiRegister.register(application)
+            //    HuaWeiRegister.register(application)
             }
             val oppoAppKey = appInfo.metaData.getString("com.oppo.push.client.app_key")
             val oppoAppSecret = appInfo.metaData.getString("com.oppo.push.client.app_secret")
@@ -96,6 +98,7 @@ class RammusPlugin(private val registrar: Registrar, private val methodChannel: 
                 Log.d(TAG, "正在注册Gcm推送服务...")
                 GcmRegister.register(application.applicationContext, gcmSendId, gcmApplicationId)
             }
+            */
         }
     }
 
