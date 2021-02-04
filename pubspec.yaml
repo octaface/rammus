@@ -1,5 +1,5 @@
 name: rammus
-description: Modified by Mirrorera base on rammus 1.2.1, Flutter plugin for AliCloud push, including both android and ios. Receive background messages and notifications.
+description: Modified by Octaface base on rammus 1.2.1. Flutter plugin for AliCloud push, including both android and ios. Receive background messages and notifications.
 version: 1.2.1
 homepage: https://github.com/OpenFlutter/rammus
 
