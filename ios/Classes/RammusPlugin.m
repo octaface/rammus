@@ -334,9 +334,9 @@ UNNotificationPresentationOptions _notificationPresentationOption = UNNotificati
     NSLog(@"Receive a notification in foregound.");
     // 处理iOS 10通知，并上报通知打开回执
     [self handleiOS10Notification:notification fromFront:YES];
-    completionHandler(_notificationPresentationOption);
+    // completionHandler(_notificationPresentationOption);
     // 通知不弹出
-//    completionHandler(UNNotificationPresentationOptionNone);
+    completionHandler(UNNotificationPresentationOptionNone);
 
     // 通知弹出，且带有声音、内容和角标
 //    completionHandler(UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge);
